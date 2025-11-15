@@ -45,8 +45,8 @@ account default : yandex
 
 printf "Subject: Test\n\nHello there username." | msmtp -a default someuser@gmail.com
 echo -e "Subject: Test\n\nHello! Mail form `hostname`" | msmtp -d someuser@gmail.com
-echo "Subject: Тема письма " | msmtp -F `hostname` -d usera@example.com
-echo "Subject: На 2 адресата " | msmtp -F `hostname` -d -- usera@example.com userb@example.com
+echo "Subject: Тема письма "$'\n\n' | msmtp -F `hostname` -d usera@example.com
+echo "Subject: На 2 адресата "$'\n\n' | msmtp -F `hostname` -d -- usera@example.com userb@example.com
 
 # sending email by using composed mail file
 # create file
@@ -94,6 +94,7 @@ echo "Текст письма" | mutt -e 'set realname=`hostname`' -s `hostname`
 
 
 ---
+
 
 
 
