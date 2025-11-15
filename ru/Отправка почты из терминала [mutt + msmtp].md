@@ -43,7 +43,7 @@ account default : yandex
 ````bash
 # sending mail form terminal
 
-printf "Subject: Test\n\nHello there username." | msmtp -a default sunika@gmail.com
+printf "Subject: Test\n\nHello there username." | msmtp -a default someuser@gmail.com
 echo "test" | msmtp -d usera@example.com
 echo "test" | msmtp -F `hostname` -d usera@example.com
 echo "Subject: Тема письма " | msmtp -F `hostname` -d usera@example.com
@@ -95,6 +95,7 @@ echo "Текст письма" | mutt -e 'set realname=`hostname`' -s `hostname`
 
 
 ---
+
 
 
 
