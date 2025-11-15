@@ -63,7 +63,8 @@ cat /usr/local/etc/mail_sample.mail | msmtp -a default sunika@gmail.com
 msmtp: server message: 554 5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1762776177-v2MF7s0LwGk0-zNne4zMr 
 ````
 достаточно отправить письмо через родной веб-интерфейс Яндекс-а на этот адрес.  
-Для отправки Простых сообщений можнос использовать msmtp, но если надо допустим отправить письмо с вложением тут нужно сформировать письмо 
+
+  Для отправки Простых сообщений можно использовать msmtp, но если надо допустим отправить письмо с вложением тут нужно сформировать письмо 
 по стандарту [MIME](https://en.wikipedia.org/wiki/MIME), чего msmtp не может. Для этого будем использовать mutt.  
 
 Отредактируем файл ~/.mutt/muttrc
@@ -94,6 +95,7 @@ echo "Текст письма" | mutt -e 'set realname=`hostname`' -s `hostname`
 
 
 ---
+
 
 
 
